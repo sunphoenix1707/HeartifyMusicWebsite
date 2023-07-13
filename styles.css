@@ -1,0 +1,339 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+.main {
+    display:flex;
+    height: 100vh;
+    padding:0.5rem;
+}
+.sidebar {
+    background-color: black; 
+    /* search from colorpicker */
+    width:320px;
+    border-radius:0.75rem;
+    /* here we are creating border curve here 1 rem means 16 pixels,we get curved edges */
+    margin-right:0.5rem;
+
+}
+.main-content {
+    background-color:#121212;
+    flex:1; 
+    border-radius:1rem;
+    /* baki ke jitne bhi elem hai mere container mein unko utni jgah dedo jitni unko jrurat hai baki ki sari bachi
+    jgah mujhe dedo */
+    overflow:auto;
+    /* it means scrollbar will be visible only when needed or in case of content overflow */
+}
+.music-player {
+    background-color:black;
+    position:fixed;
+    /* position music player ki fix hai bottom mein cant be moved */
+    /* we want its position to get fixed from bottom so bottom is set to zero */
+    bottom:0;
+    width:100%;
+    height:72px;
+}
+a{
+    text-decoration : none;
+    color: #fff;
+
+}
+.nav {
+    background-color:#121212;
+    border-radius: 1rem;
+    display: flex;
+    /* all div lies in one line(home,search) */
+    flex-direction:column;
+    /* with help of this both will be together but in columnwise */
+    justify-content:center;
+    /* if we want vertically content comes in centre */
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+.nav-option {
+    line-height:2.5rem;
+    opacity:0.7;
+    padding:0.5rem 0.75rem;
+}
+.nav-option:hover {
+    opacity:1;
+}
+.nav-option i {
+font-size:1.25rem;
+}
+.nav-option a {
+font-size:1rem;
+margin-left:1rem;
+}
+.library {
+    background-color:#121212;
+    border-radius: 1rem;
+    /* curve */
+    height:100%;
+    margin-top:0.5rem;
+    padding:0.5rem 0.75rem;
+
+}
+.options {
+    display:flex;
+    justify-content: space-between;
+    /* space between your lib and plus arrow appears */
+    align-items: center;
+    /* your lib and arrows will lie in same line  */
+}
+.lib-option img{
+    height:1.2rem;
+    width:1.2 rem;
+
+}
+.icons {
+    font-size:1.2rem;
+    display:flex;
+}
+.icons i{
+    opacity:0.7;
+    margin-right:1rem;
+}
+.icons i:hover {
+    opacity:1;
+}
+.box {
+    background-color:#232323;
+    height:7rem;
+    border-radius:0.25rem;
+    margin:0.5rem 0 1rem 0;
+    padding:0.5rem 1rem;
+}
+.box-p1 {
+    font-size:0.85rem;
+    font-weight:700;
+}
+.box-p2 {
+    font-size:0.65rem;
+    opacity:0.5;
+}
+.badge {
+    background-color:#fff;
+    border: none;
+    border-radius:40px;
+    padding:0.2 rem 0.5rem;
+    font-weight:700;
+    margin-top:0.5rem;
+    height:2rem;
+    width:fit-content;
+}
+.dark-badge {
+    background-color:black;
+    color:#fff;
+}
+.sticky-nav{
+    position:sticky;
+    top:0;
+    background-color: #121212;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0.75rem 0 0.75rem 0;
+}
+.sticky-nav-icons {
+    margin-left:0.5rem;
+}
+.sticky-nav-options {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.nav-item{
+margin-right:2rem;
+}
+@media (max-width: 1000px) {
+    .hide {
+        display:none;
+    }
+}
+.navbar {
+    display:flex;
+     font-size: 22px;
+     margin-bottom:20px;
+     
+}
+.songs {
+    min-width:140px;
+    width:160px;
+    height:14rem;
+    padding:15px;
+    background-color:#181818;
+    border-radius:6px;
+    margin:0.5rem 0 1rem 0;
+    cursor:pointer;
+    transition:all ease 0.4s;
+   
+
+}
+.songs:hover {
+    background-color: #252525;
+}
+.songs img {
+    width:100%;
+    border-radius:6px;
+    margin-bottom:10px;
+}
+/* .songs-title {
+position:absolute;
+right:10px;
+top:-60px;
+padding:18px;
+background-color:  #1db954;
+border-radius:100%;
+opacity:0%;
+transition: all ease 0.4s;
+
+}
+.songs-title:hover {
+    opacity:1;
+    transform:translateV(-20px);
+} */
+
+/* .songs-title {
+    color:#ffffff;
+    font-size:14px;
+    margin:10px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.songs info{
+    color:#989898;
+    font-size:12px;
+    line-height:20px;
+    font-weight:12px;
+    font-weight:600px;
+} */
+.preview {
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background: linear-gradient(to right,#ae2896,#509bf5);
+    padding:12px 30px;
+    display:flex;
+    justify-content:space-between;
+
+
+}
+.preview h6{
+    color:#ffffff;
+       text-transform: uppercase;
+       font-weight:400;
+       font-size:12px;
+       margin-bottom:10px;
+}
+.preview p{
+    color:#ffffff;
+    font-size:14px;
+    font-weight:500;
+}
+.preview button {
+    background-color:#ffffff;
+    color:#000000;
+    font-size:16px;
+    font-weight:bold;
+    padding:14px 30px;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+}
+.spotify-playlist {
+    padding:20px 40px;
+
+}
+.spotify-playlist h2{
+    color:#ffffff;
+    font-size:22px;
+    margin-bottom:20px;
+}
+.spotify-playlist .list{
+    display:flex;
+    font-size:22px;
+    margin-bottom:20px;
+}
+.spotify-playlist .list .item{
+    min-width:140px;
+    width:160px;
+    padding:15px;
+    background-color:#181818;
+    border-radius:6px;
+    cursor:pointer;
+    transition:all ease 0.4s;
+}
+.spotify-playlist .list .item:hover{
+    background-color:#252525;
+
+}
+.spotify-playlist .list .item img {
+    width:100%;
+    border-radius:6px;
+    margin-bottom:10px;
+}
+.spotify-playlist .list .item .play {
+    position:relative;
+}
+.spotify-playlist .list .item .play .fa{
+    position:absolute;
+    right:10px;
+    top:-60px;
+    padding:18px;
+    background-color:#1db954;
+    border-radius:100%;
+    opacity:0;
+    transition: all ease 0.4s;
+
+}
+.spotify-playlist .list .item :hover .play .fa{
+    opacity:1;
+    transform: translateV(-20px);
+}
+.spotify-playlist .list .item h4{
+    color:#ffffff;
+    font-size:14px;
+    margin:10px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+
+}
+.spotify-playlist .list .item p{
+    color: #989898;
+    font-size:12px;
+    line-height:20px;
+    font-weight:600;
+}
+.card{
+    background-colour:#232323;
+    width:150px;
+    border-radius:0.5rem;
+    padding:1rem;
+    margin-left:1.5rem;
+    margin-top:1rem;
+}
+.cards-container{
+    display:flex;
+    flex:wrap;
+}
+.card-img {
+    width:100%;
+    border-radius:0.5rem;
+   
+}
+.card-title {
+    font-weight:600;
+}
+.card-info{
+    font-size:0.85ren;
+      opacity:0.8;
+}
+
